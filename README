@@ -1,0 +1,122 @@
+# MFE YOLO Assignment
+## Getting Started with GitHub
+
+Before you start working on the assignment, create your own branch and pull it to your computer:
+
+1. **Create a branch on GitHub Online**
+   - Go to your repository on GitHub.
+   - Click the branch dropdown (default is `main` or `master`) and type a new branch name `FirstNameLastName_YOLOMODEL`, e.g. `NeilJoeGeorge_yolo11n`.
+   - Click **Create branch**.
+
+2. **Clone the repository and switch to your branch**
+
+```bash
+# Clone the repository (replace <repo-url> with your repo's HTTPS or SSH URL)
+git clone <repo-url>
+cd <repo-name>
+
+# Switch to your branch
+git checkout assignment-student1
+```
+
+## Overview
+
+The goal of this assignment is for you to get hands-on experience and gain a better understanding of YOLO models. The code is already provided in `train_yolo.py`, and your task is to modify the YOLO model and some of its training parameters, then observe the differences.
+
+## Requirements
+
+- Python ≥ 3.10  
+- GPU recommended (CUDA) or Apple MPS for Mac  
+- Optional: Virtual environment (recommended)
+
+### Install Dependencies
+
+1. Create a virtual environment (optional but recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
+
+2. Install all dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Files
+
+| File               | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| `train_yolo.py`    | Main script for training YOLO models.                |
+| `config.yaml`      | Dataset configuration file (train/val paths, classes). |
+| `requirements.txt` | Python dependencies for the assignment.                |
+| `runs/`            | Output directory for training logs and weights.        |
+
+---
+
+## Usage
+
+1. **Set hyperparameters and model**
+
+In `train_yolo.py`, you can modify:
+
+```python
+SELECTED_MODEL = "yolo11s.yaml"  # Model variant
+EPOCHS = 2                        # Number of training epochs
+BATCH_SIZE = 8                     # Batch size per iteration
+WORKERS = 10                       # Number of CPU threads for data loading
+USE_AMP = True                     # Enable Automatic Mixed Precision
+DEVICE_SELECTION = [0]             # GPU device index, or "mps" for Mac
+```
+
+2. **Run the training script**
+
+```bash
+python train_yolo.py
+```
+
+3. **View outputs**
+
+* Trained model weights: `runs/cone_detection/<MODEL_NAME>/weights/best.pt`
+* Training logs, metrics, and plots are stored in `runs/cone_detection/<MODEL_NAME>/`.
+
+---
+
+## Assignment Tasks
+
+1. **Model Variants**
+
+   * Train with different YOLO variants: `yolo8n.yaml`, `yolo8s.yaml`, `yolo11s.yaml`, etc.
+   * Observe differences in:
+
+     * Training time
+     * GPU/CPU usage
+     * Detection accuracy
+
+2. **Hyperparameter Experiments**
+
+   * Change `EPOCHS`, `BATCH_SIZE`, `WORKERS`, and `USE_AMP`.
+   * Compare how each setting affects:
+
+     * Training duration
+     * Resource usage
+     * Model performance on validation dataset
+
+3. **Report**
+
+   * Prepare a short report (or presentation) summarizing your findings:
+
+     * Which model was fastest to train?
+     * Which model achieved the best accuracy?
+     * How did AMP, batch size, and number of workers affect results?
+
+---
+
+## Experiment Log Template (Optional)
+
+| Model   | Epochs | Batch Size | Workers | AMP  | Training Time | Validation Accuracy | Notes   |
+| ------- | ------ | ---------- | ------- | ---- | ------------- | ------------------- | ------- |
+| yolo11s | 2      | 8          | 10      | True | 12m           | 0.78 mAP            | Default |
+| ...     | ...    | ...        | ...     | ...  | ...           | ...                 | ...     |

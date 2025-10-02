@@ -1,0 +1,14 @@
+
+path: # dataset root dir
+train: train\images
+val: valid\images
+test: test\images   # optional
+
+# Classes
+names:
+  0: blue
+  1: large orange
+  2: small orange
+  3: other
+  4: yellow
+          
