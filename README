@@ -124,9 +124,20 @@ Example: `Chalmers_driverless_out.mp4`
 
      * Which model was fastest to train?
      * Which model achieved the best accuracy?
-     * How did AMP, batch size, and number of workers affect results?
+     * How did AMP, batch size, and number of workers affect results
 
----
+4. **Random Questions**
+
+   * Think of these questions and answer them yourself:
+
+      * What does YOLO stand for?
+      * Why must the `.txt` label filenames match the image filenames exactly?
+      * How do you measure YOLO performance?
+      * What does a confusion matrix tell you for multi-class object detection?
+      * How do you know your model is overfitting or underfitting?
+      * How would you improve accuracy for classes that are consistently mispredicted?
+      * How do you handle false positives and false negatives in your predictions?
+
 
 ## Experiment Log Template (Optional)
 
