@@ -1,8 +1,10 @@
+# Dataset root directory
+path: TutorialData
 
-path: # dataset root dir
-train: train\images
-val: valid\images
-test: test\images   # optional
+# Image folders for each split
+train: Train/img # 80%
+val: Validate/img # 10%
+test: Test/img   # 10%
 
 # Classes
 names:
