@@ -2,9 +2,9 @@
 path: TutorialData
 
 # Image folders for each split
-train: Train/img # 80%
-val: Validate/img # 10%
-test: Test/img   # 10%
+train: Train/images # 80%
+val: Validate/images # 10%
+test: Test/images   # 10%
 
 # Classes
 names:

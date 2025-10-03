@@ -12,36 +12,13 @@ Before you start working on the assignment, create your own branch and pull it t
    - Click the branch dropdown (default is `main`) and type a new branch name `FirstNameLastName`, e.g. `NeilJoeGeorge`.
    - Click **Create branch**.
 
-2. **Git LFS Setup (for videos and training images)**
 
-This repository uses [Git LFS](https://git-lfs.com/) to handle large files such as `.mp4` videos and datasets.  
-
-1. Install Git LFS:
-
-```bash
-# Mac (Homebrew)
-brew install git-lfs
-```
-```bash
-# Ubuntu/Debian
-sudo apt-get update
-sudo apt-get install git-lfs
-```
-```bash
-# Windows (with Chocolatey)
-choco install git-lfs
-```
-
-
-3. **Clone the repository and switch to your branch**
+2. **Clone the repository and switch to your branch**
 
 ```bash
 # Clone the repository (replace <repo-url> with your repo's HTTPS or SSH URL)
 git clone <repo-url>
 cd <repo-name>
-git lfs install
-git lfs pull
-
 
 # Switch to your branch
 git checkout <FirstNameLastName>
@@ -59,7 +36,7 @@ git checkout <FirstNameLastName>
 
 ```bash
 python -m venv venv
-source venv/bin/activate   # Mac/Linux
+source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
 
@@ -71,13 +48,14 @@ pip install -r requirements.txt
 
 ## Files
 
-| File               | Description                                            |
-| ------------------ | ------------------------------------------------------ |
-| `train_yolo.py`    | Main script for training YOLO models.                |
-| `predict_video.py`    | Run inference on a video with trained YOLO model.               |
-| `config.yaml`      | Dataset configuration file (train/val paths, classes). |
-| `requirements.txt` | Python dependencies for the assignment.                |
-| `runs/`            | Output directory for training logs and weights.        |
+| File               | Description                                              |
+| ------------------ | -------------------------------------------------------- |
+| `train_yolo.py`    | Main script for training YOLO models.                    |
+| `predict_video.py` | Run inference on a video with trained YOLO model.        |
+| `config.yaml`      | Dataset configuration file (train/val paths, classes).   |
+| `requirements.txt` | Python dependencies for the assignment.                  |
+| `runs/`            | Output directory for training logs and weights.          |
+| `TutorialData/`    | Directory with all the images for training/validation/testing using a 80/10/10 split.          |
 
 ---
 
