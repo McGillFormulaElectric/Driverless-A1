@@ -6,7 +6,7 @@ if __name__ == "__main__":
     video_path = 'Chalmers_driverless.mp4'  # input video
     video_path_out = os.path.splitext(video_path)[0] + '_out.mp4'  # output video
 
-    model_path = "runs/cone_detection/yolo11s.yaml6/weights/best.pt" # PATH OF BEST PT FILE
+    model_path = "runs/cone_detection/yolo11s.yaml3/weights/best.pt" # PATH OF BEST PT FILE
     model = YOLO(model_path)
 
     cap = cv2.VideoCapture(video_path)

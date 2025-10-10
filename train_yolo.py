@@ -6,9 +6,9 @@ SELECTED_MODEL = "yolo11s.yaml"  # Change this to train a different variant
 
 DATA_CONFIG = "config.yaml"
 
-EPOCHS = 1
-BATCH_SIZE = 4
-WORKERS = 4
+EPOCHS = 2
+BATCH_SIZE = 8
+WORKERS = 10
 USE_AMP = True
 OUTPUT_DIR = "runs/cone_detection/"
 DEVICE_SELECTION = None
