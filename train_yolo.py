@@ -2,13 +2,13 @@ from ultralytics import YOLO
 import torch
 import os
 
-SELECTED_MODEL = "yolo11s.yaml"  # Change this to train a different variant
+SELECTED_MODEL = "yolov8s"  # Change this to train a different variant
 
 DATA_CONFIG = "config.yaml"
 
-EPOCHS = 2
-BATCH_SIZE = 8
-WORKERS = 10
+EPOCHS = 3
+BATCH_SIZE = 10
+WORKERS = 12
 USE_AMP = True
 OUTPUT_DIR = "runs/cone_detection/"
 DEVICE_SELECTION = None
