@@ -1,9 +1,9 @@
-# Dataset root directory
+#Dataset root directory
 path: TutorialData
 
 # Image folders for each split
-train: Train/images # 80%
-val: Validate/images # 10%
+train: result_yolo/images/train # 80%
+val: result_yolo/images/val # 10%
 test: Test/images   # 10%
 
 # Classes
@@ -13,4 +13,8 @@ names:
   2: small orange
   3: other
   4: yellow
-          
+  5: red
+  6: orange
+  7: yellow
+  8: green
+  9: violet        

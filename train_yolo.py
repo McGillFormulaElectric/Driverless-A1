@@ -8,7 +8,7 @@ DATA_CONFIG = "config.yaml"
 
 EPOCHS = 1
 BATCH_SIZE = 4
-WORKERS = 4
+WORKERS = 8
 USE_AMP = True
 OUTPUT_DIR = "runs/cone_detection/"
 DEVICE_SELECTION = None
